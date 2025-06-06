@@ -16,7 +16,7 @@ def find_missing_number_2(nums: list[int]) -> int:
 
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': # Code under this block will not run if you import the file elsewhere.
     nums = [1, 2, 4, 5]
     print(f'Missing number is: {find_missing_number_1(nums)}')  
     print(f'Missing number is: {find_missing_number_2(nums)}')  
