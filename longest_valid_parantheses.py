@@ -21,10 +21,7 @@ def longest_vaild_parentheses1(s: str) -> bool:
         if char == '(':
             stack.append(index)
         else:
-            if len(stack) == 1:
-                max_len = max(max_len, index+1-stack[0])
-                stack.pop()
-            elif len(stack) > 1:
+            if len(stack) > 0:
                 max_len = max(max_len, index+1-stack[-1])
                 stack.pop()
     return max_len
