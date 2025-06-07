@@ -4,7 +4,7 @@ from missing_number import find_missing_number_2
 from bracket_balance import is_balanced
 from prime_gaps import is_prime, prime_gap
 from palindrome_with_clean import clean_string, palindrome_check, palindrome_check_with_for_loop
-from longest_valid_parantheses import longest_vaild_parantheses
+from longest_valid_parantheses import longest_vaild_parentheses, longest_vaild_parentheses1
 
 def test_find_missing_number_1():
     '''Test the find_missing_number_1 function to ensure it finds the missing number correctly.'''
@@ -96,13 +96,23 @@ def test_palindrome_check_with_for_loop():
 
 def test_longest_valid_parantheses():
     '''Test the longest_vaild_parantheses function to ensure it finds the longest valid parentheses substring.'''
-    assert longest_vaild_parantheses('(((())))') == 8
-    assert longest_vaild_parantheses(")))))))((()))") == 6
-    assert longest_vaild_parantheses('()()()') == 6
-    assert longest_vaild_parantheses('(()') == 2
-    assert longest_vaild_parantheses(')()())') == 4
-    assert longest_vaild_parantheses('') == 0
-    assert longest_vaild_parantheses('((((()))))') == 10
+    assert longest_vaild_parentheses('(((())))') == 8
+    assert longest_vaild_parentheses(")))))))((()))") == 6
+    assert longest_vaild_parentheses('()()()') == 6
+    assert longest_vaild_parentheses('(()') == 2
+    assert longest_vaild_parentheses(')()())') == 4
+    assert longest_vaild_parentheses('') == 0
+    assert longest_vaild_parentheses('((((()))))') == 10
+
+def test_longest_valid_parantheses1():
+    '''Test the longest_vaild_parentheses1 function to ensure it finds the longest valid parentheses substring.'''
+    assert longest_vaild_parentheses1('(((())))') == 8
+    assert longest_vaild_parentheses1(")))))))((()))") == 6
+    assert longest_vaild_parentheses1('()()()') == 2
+    assert longest_vaild_parentheses1('(()') == 2
+    assert longest_vaild_parentheses1(')()())') == 2
+    assert longest_vaild_parentheses1('') == 0
+    assert longest_vaild_parentheses1('((((()))))') == 10
 
 if __name__ == '__main__':
     pytest.main(['-v', __file__])
